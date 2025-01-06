@@ -1,5 +1,3 @@
-import json
-
 from discord_messenger import DiscordWebhook
 from nasa_api import NasaDataManager
 
