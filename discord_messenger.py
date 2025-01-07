@@ -19,3 +19,13 @@ class DiscordWebhook:
         response = requests.post(self.url, json=message)
         response.raise_for_status()
         print(response.content)
+
+    def send_avod(self, data):
+        message = {
+            "username": self.username,
+            "avatar_url": self.avatar_url,
+            "content": data["date"] + "\n" + data["explanation"] + "\n" + data["url"],
+        }
+        response = requests.post(self.url, json=message)
+        response.raise_for_status()
+        print(response.content)
